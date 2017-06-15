@@ -23,6 +23,12 @@ let g1: Double = 3.71
 let g2: Double = 15.0
 let k1: Double = 0.27
 let k2: Double = 0.012
+var label: SKLabelNode?
+var label2: SKLabelNode?
+var label3: SKLabelNode?
+var label4: SKLabelNode?
+var label5: SKLabelNode?
+let label6: SKLabelNode?
 class GameScene: SKScene {
     var timer = NSTimer()
     
@@ -66,7 +72,9 @@ class GameScene: SKScene {
         label.fontColor = UIColor.redColor()////文字色
         label.zPosition = 0
         //label.color = UIColor.blackColor()
-        background.addChild(label)
+        self.addChild(label)
+        self.label = label
+        
         
         label2.position = CGPoint(x:self.view!.bounds.width*2.4/3,y:self.view!.frame.height*1.5/3)
         label2.fontSize = 15.0
